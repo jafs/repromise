@@ -4,7 +4,7 @@ type RejectCallback = (rejectReason: string) => void;
 /**
  * This class is to easy to understand ;) Only is a wrapper for standar JavaScript Promise.
  */
-export default class Repromise<T> {
+export class Repromise<T> {
 	private resolveCallback: ResolveCallback<T>;
 	private rejectCallback: RejectCallback;
 	private promise: Promise<T>;

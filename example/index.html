@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Repromise Example</title>
+		<style>
+			pre {
+				background-color: #F0F0F0;
+				padding: 10pt;
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>Live Example</h1>
+		<span>Loading Repromise... <i></i></span>
+
+		<h1>Code used</h1>
+		<pre>
+const iElement = document.querySelector("i");
+
+async function waitForPromise(myPromise) {
+	let textToUse = "";
+
+	try {
+		textToUse = await myPromise;
+	} catch (errorReason) {
+		textToUse = errorReason;
+	}
+
+	iElement.textContent = textToUse;
+}
+
+const myPromise = new Repromise();
+
+setTimeout(function() {
+	if (parseInt(Math.random() * 1000) % 2) {
+		myPromise.resolve("Done");
+	} else {
+		myPromise.reject("This is not done");
+	}
+}, 1000);
+
+waitForPromise(myPromise.getPromise());
+		</pre>
+
+		<script>
+			var exports = {};
+		</script>
+
+		<script src="../dist/repromise.min.js"></script>
+		<script>
+			const iElement = document.querySelector("i");
+
+			async function waitForPromise(myPromise) {
+				let textToUse = "";
+
+				try {
+					textToUse = await myPromise;
+				} catch (errorReason) {
+					textToUse = errorReason;
+				}
+
+				iElement.textContent = textToUse;
+			}
+
+			const myPromise = new Repromise();
+
+			setTimeout(function() {
+				if (parseInt(Math.random() * 1000) % 2) {
+					myPromise.resolve("Done");
+				} else {
+					myPromise.reject("This is not done");
+				}
+			}, 1000);
+
+			waitForPromise(myPromise.getPromise());
+		</script>
+	</body>
+</html>

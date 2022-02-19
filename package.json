@@ -1,7 +1,8 @@
 {
   "name": "jrepromise",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Wrapper for simplify promises in JavaScript.",
+  "main": "dist/repromise.min.js",
   "scripts": {
     "minify": "minify dist/repromise.js > dist/repromise.min.js",
     "build": "tsc",
