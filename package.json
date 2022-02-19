@@ -1,5 +1,5 @@
 {
-  "name": "repromise",
+  "name": "jrepromise",
   "version": "0.0.1",
   "description": "Wrapper for simplify promises in JavaScript.",
   "scripts": {
