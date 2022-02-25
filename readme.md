@@ -14,7 +14,7 @@ function exampleWithResolvedPromise() {
 	// do some stuff
 
 	repromise.resolve("Value to resolve");
-	repromise.getPromise();
+	return repromise.getPromise();
 }
 
 function exampleWithRejectedPromise() {
@@ -25,6 +25,18 @@ function exampleWithRejectedPromise() {
 	repromise.reject("Reason to reject");
 	return repromise.getPromise();
 }
+
+async function repromiseTest() {
+	console.log("Resolved to: " + await exampleWithResolvedPromise());
+
+	try {
+		await exampleWithRejectedPromise();
+	} catch (error) {
+		console.error("Rejected with reason: " + error);
+	}
+};
+
+repromiseTest();
 ```
 
 ## Methods of Repromise

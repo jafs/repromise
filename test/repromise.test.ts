@@ -1,4 +1,4 @@
-import Repromise from "../src/repromise";
+import { Repromise } from "../src/repromise";
 
 describe("Repromise class testing", (): void => {
 	test("must resolve a promise successfully", async (): Promise<void> => {
