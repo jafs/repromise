@@ -1,6 +1,6 @@
 {
   "name": "jrepromise",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Wrapper for simplify promises in JavaScript.",
   "main": "dist/repromise.min.js",
   "scripts": {
@@ -8,7 +8,20 @@
     "build": "tsc",
     "test": "jest"
   },
-  "author": "José Antonio Fuentes Santiago",
+  "author": {
+    "name": "José Antonio Fuentes Santiago",
+    "email": "jafs@jafs.es",
+    "url": "https://jafs.es"
+  },
+  "bugs": {
+    "url": "https://github.com/jafs/repromise/issues"
+  },
+  "keywords": ["promise", "javascript"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jafs/repromise.git"
+  },  
+  "homepage": "https://github.com/jafs/repromise/issues",
   "license": "Apache License 2.0",
   "devDependencies": {
     "@types/jest": "27.4.0",
